@@ -37,8 +37,6 @@ Portfolio Builder does not invent findings, targets, business facts, causal clai
 - Privacy: `https://github.com/IssyAn/issybi-portfolio-builder/blob/main/docs/PRIVACY.md`
 - Terms: `https://github.com/IssyAn/issybi-portfolio-builder/blob/main/docs/TERMS.md`
 
-Replace `OWNER` before submission and verify every URL in a signed-out browser.
-
 ## Logo
 
 Use `plugins/issybi-portfolio-builder/assets/logo.png`.
