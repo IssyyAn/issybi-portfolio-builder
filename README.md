@@ -2,7 +2,7 @@
 
 Portfolio Builder is an Issy BI skill that turns a topic, dataset, database, or existing project into one focused, evidence-based data portfolio project.
 
-It is designed to help learners show analytical judgement—not simply produce another dashboard. The skill checks the evidence first, connects a realistic stakeholder to an actionable decision, separates supported analysis from unsupported ideas, and creates a practical build and case-study brief.
+It is designed to help learners show analytical judgement not simply produce another dashboard. The skill checks the evidence first, connects a realistic stakeholder to an actionable decision, separates supported analysis from unsupported ideas, and creates a practical build and case-study brief.
 
 ## What it does
 
@@ -27,10 +27,10 @@ It is designed to help learners show analytical judgement—not simply produce a
 After uploading this repository to GitHub, add it as a plugin marketplace:
 
 ```bash
-codex plugin marketplace add OWNER/issybi-portfolio-builder
+codex plugin marketplace add IssyAn/issybi-portfolio-builder
 ```
 
-Replace `OWNER` with your GitHub username or organisation. Restart the ChatGPT desktop app, open the Plugins Directory, choose **Issy BI Plugins**, and install **Portfolio Builder**.
+Replace `IssyAn` with your GitHub username or organisation. Restart the ChatGPT desktop app, open the Plugins Directory, choose **Issy BI Plugins**, and install **Portfolio Builder**.
 
 For a local checkout, use:
 
