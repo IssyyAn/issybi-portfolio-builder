@@ -1,0 +1,45 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "issybi-portfolio-builder",
+  "version": "1.0.0",
+  "description": "Plan evidence-based data analyst portfolio projects from data, schemas, ideas, or existing work.",
+  "author": {
+    "name": "Issy BI"
+  },
+  "license": "MIT",
+  "keywords": [
+    "data analytics",
+    "portfolio",
+    "sql",
+    "power bi",
+    "spreadsheets",
+    "data storytelling"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Portfolio Builder",
+        "shortDescription": "Build evidence-based data portfolio projects.",
+        "longDescription": "Turn a topic, dataset, database schema, or existing project into a focused portfolio project with an actionable stakeholder decision, evidence checks, a practical build plan, and a traceable case study.",
+        "developerName": "Issy BI",
+        "category": "Data & Analytics",
+        "capabilities": [
+          "Analyze",
+          "Plan",
+          "Document"
+        ],
+        "defaultPrompt": [
+          "Turn my dataset into a focused portfolio project.",
+          "Strengthen the analytical story in my existing project."
+        ],
+        "brandColor": "#C7C3F0",
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/logo.png",
+        "screenshots": [
+          "./assets/plugin-preview.png"
+        ]
+      }
+    }
+  }
+}
+
