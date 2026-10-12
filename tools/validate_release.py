@@ -29,7 +29,6 @@ def main() -> int:
         ROOT / "README.md",
         ROOT / "LICENSE",
         ROOT / "PORTFOLIO_BUILDER_LITE.md",
-        ROOT / ".agents" / "plugins" / "marketplace.json",
         ROOT / "docs" / "PRIVACY.md",
         ROOT / "docs" / "TERMS.md",
         ROOT / "docs" / "SUPPORT.md",
@@ -41,6 +40,9 @@ def main() -> int:
         SKILL / "SKILL.md",
         SKILL / "references" / "planning-framework.md",
         SKILL / "references" / "project-modes.md",
+        SKILL / "references" / "evidence-contract.md",
+        SKILL / "references" / "dashboard-mockups.md",
+        ROOT / "tests" / "BEHAVIORAL_CASES.md",
     ]
     for path in required:
         require(path.is_file(), f"Missing required file: {path.relative_to(ROOT)}")
@@ -56,6 +58,7 @@ def main() -> int:
     interface = manifest["extensions"]["com.openai"]["interface"]
     for field in ("displayName", "shortDescription", "longDescription", "developerName", "category"):
         require(bool(interface.get(field)), f"Missing interface field: {field}")
+    require(len(interface["shortDescription"]) <= 30, "Listing subtitle exceeds 30 characters")
     for field in ("composerIcon", "logo"):
         relative = interface[field]
         require(relative.startswith("./"), f"{field} must use a ./-relative path")
@@ -67,8 +70,13 @@ def main() -> int:
     skill_text = (SKILL / "SKILL.md").read_text(encoding="utf-8")
     require(skill_text.startswith("---\nname: data-portfolio-builder\n"), "Skill front matter name is missing or changed")
     require("description:" in skill_text.split("---", 2)[1], "Skill front matter description is missing")
-    for link in re.findall(r"\]\((references/[^)]+)\)", skill_text):
-        require((SKILL / link).is_file(), f"Broken SKILL.md reference: {link}")
+    for doc in SKILL.rglob("*.md"):
+        for link in re.findall(r"\]\(([^)]+)\)", doc.read_text(encoding="utf-8")):
+            if "://" in link or link.startswith("#"):
+                continue
+            target = (doc.parent / link.split("#", 1)[0]).resolve()
+            require(target.is_relative_to(SKILL.resolve()), f"Reference escapes skill: {link}")
+            require(target.is_file(), f"Broken reference in {doc.name}: {link}")
 
     tests = (ROOT / "submission" / "test-cases.md").read_text(encoding="utf-8")
     require(len(re.findall(r"^## Positive ", tests, flags=re.MULTILINE)) == 5, "Submission must contain exactly five positive tests")
@@ -80,7 +88,7 @@ def main() -> int:
         "private key": re.compile(r"-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----"),
     }
     for path in ROOT.rglob("*"):
-        if not path.is_file() or path.suffix.lower() in {".png", ".xlsx", ".zip"}:
+        if ".git" in path.parts or not path.is_file() or path.suffix.lower() in {".png", ".xlsx", ".zip"}:
             continue
         text = path.read_text(encoding="utf-8", errors="ignore")
         for label, pattern in secret_patterns.items():

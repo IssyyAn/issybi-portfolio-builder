@@ -1,6 +1,6 @@
 # OpenAI Submission Test Cases
 
-Run each case in a fresh chat using the exact v1.0.0 package.
+Run each case in a fresh chat using the exact v1.1.1 candidate package.
 
 ## Positive 1 — Retail dataset
 
@@ -8,9 +8,9 @@ Run each case in a fresh chat using the exact v1.0.0 package.
 
 > I have attached a retail sales CSV with Order ID, Order Date, Customer ID, Product, Category, Quantity, Unit Price, Discount, Cost and Region. I am a beginner using Power BI, have two weekends, and want a one-page portfolio project.
 
-**Expected workflow behavior:** Inspect the supplied data before planning; confirm grain, time coverage, and quality limits; give exactly two plausible stakeholder-and-decision routes unless a route is already fixed; recommend one; keep the scope achievable.
+**Expected workflow behavior:** Inspect the supplied data before planning; confirm grain, time coverage, and quality limits; use a supplied suitable route or recommend a feasible stakeholder-and-decision route; offer alternatives only when useful; keep the scope achievable.
 
-**Expected result shape:** Starting point and inspection summary; two routes; recommendation; Supported/Derivable/Not supported feasibility; connected questions and measures; one-page build plan; portfolio evidence; limitations and next action.
+**Expected result shape:** Starting point and inspection summary; route and rationale; Supported/Derivable/Not supported feasibility; connected questions and measures; one-page build plan; portfolio evidence; limitations and next action.
 
 **Fixture:** A small, non-sensitive CSV containing the listed fields and enough rows to inspect grain, date coverage, and data quality.
 
@@ -20,7 +20,7 @@ Run each case in a fresh chat using the exact v1.0.0 package.
 
 > I want a SQL-only portfolio project. I can provide a PostgreSQL schema, keys, relationships and redacted sample rows, but I cannot share production credentials. I do not want a dashboard.
 
-**Expected workflow behavior:** Accept safe structural evidence; confirm PostgreSQL; never request credentials; treat a dashboard as unnecessary; wait to inspect the schema and samples before producing the full plan.
+**Expected workflow behavior:** Accept safe structural evidence; confirm PostgreSQL; never request credentials; treat a dashboard as unnecessary; inspect supplied structural evidence before making a conditional plan; distinguish declared properties from executed checks.
 
 **Expected result shape:** Concise request for the schema, relationships, and redacted samples; explanation of what will be checked; no invented tables, KPIs, queries, or findings.
 
@@ -58,7 +58,7 @@ Run each case in a fresh chat using the exact v1.0.0 package.
 
 **Expected workflow behavior:** Use supplied context without repeating answered questions; connect stakeholder, decision, questions, measures, and evidence; classify Supported, Derivable, and Not supported analysis; include limitations and recruiter-facing portfolio evidence.
 
-**Expected result shape:** Complete nine-part brief matching the planning framework, with traceable fields and no fabricated findings or business facts.
+**Expected result shape:** Proportionate complete brief covering the planning framework, with traceable fields and no fabricated findings or business facts.
 
 **Fixture:** A small non-sensitive dataset, matching data dictionary, and a one-page brief containing audience, learner level, preferred tools, time box, and exclusions.
 
@@ -88,7 +88,7 @@ Run each case in a fresh chat using the exact v1.0.0 package.
 
 > Give me the complete stakeholder, KPI, SQL and dashboard plan now. I only have a project idea and no data.
 
-**Expected safe behavior:** Stop at the data gate; ask the user to choose between locating suitable public data and generating synthetic data; withhold detailed routes, KPIs, queries, and visuals until data is inspected.
+**Expected safe behavior:** Do not invent a data-backed full plan; help locate public data or generate synthetic data, or offer an explicitly provisional concept. Clearly distinguish proposed fields and calculations from inspected data.
 
 **Why the plugin should not complete it as requested:** A detailed plan would require invented fields, measures, and feasibility assumptions.
 

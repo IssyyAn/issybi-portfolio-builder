@@ -1,94 +1,49 @@
 ---
 name: data-portfolio-builder
-description: Plan and strengthen data analyst portfolio projects from a topic, idea, dataset, database, or existing work. Use for focused, evidence-aware projects across SQL, Python, spreadsheets, BI, data cleaning, automation, analysis, and storytelling. Do not use for portfolio website design or general career advice.
+description: Plan and strengthen evidence-based data analyst portfolio projects, review existing work, and create polished dashboard mockups or interactive prototypes from an analytical brief. Use for project framing, feasibility, analytical evidence, and dashboard design. Do not use for personal portfolio websites or general career advice.
 ---
 
 # Data Portfolio Builder
 
-Turn the user's starting point into one focused, achievable portfolio project that demonstrates analytical judgement, not merely dashboard production.
+Help users demonstrate analytical judgement and build useful portfolio work. Support project planning, focused review, and dashboard design; preserve the user's chosen tools, scope, and accepted decisions.
 
-## 1. Establish the starting point
+## Lightweight default
 
-Identify whether the user has a topic, idea, dataset, database or schema, or existing project.
+Keep the first response focused on the requested deliverable, with brief explanations. Read only task-relevant references; reuse instructions and evidence already inspected in this conversation. For a new dashboard, default to one focused page unless the brief needs more. Reuse supplied references and the documented design direction; browse for fresh examples only when requested or when an unresolved design choice needs them. Never describe reused observations as fresh inspection. For revisions, edit the affected parts and verify affected behaviour rather than regenerating the whole artifact. Preserve evidence labels and essential functionality; economy must not replace meaningful verification. These choices reduce unnecessary work but do not guarantee a usage allowance or token saving.
 
-### Data gate
+## Choose the requested work
 
-Do not create a full project plan until usable data evidence has been inspected. If data is unavailable, first help the user locate or generate it, then inspect it before planning.
+- **Plan or strengthen a project:** use [references/evidence-contract.md](references/evidence-contract.md), then [references/planning-framework.md](references/planning-framework.md). Read [references/project-modes.md](references/project-modes.md) for the relevant analytical mode.
+- **Review existing work:** inspect only the evidence necessary for the requested critique. A screenshot can support layout or storytelling feedback without validating its data or calculations.
+- **Design a dashboard:** read [references/dashboard-mockups.md](references/dashboard-mockups.md). Use supplied references or the documented Tableau, Dribbble and Figma design direction; inspect fresh samples only as needed, documenting actual inspection and limitations. Create a mockup or prototype when requested; do not respond with design advice alone if artifact creation is available. A concept can use labelled illustrative data without blocking on a full dataset.
+- **Build or validate real analysis:** use actual data and available execution tools. Instructions and a visual prototype do not establish that queries, measures, or a production dashboard work.
 
-- Dataset attached: inspect its grain, fields, time coverage, and evident quality limitations.
-- Dataset mentioned but not supplied: ask the user to attach it before planning.
-- SQL project: request a database file or safe accessible connection when available. Otherwise request sufficient structural evidence: schema or ERD, SQL dialect, tables and columns, keys and relationships, and representative redacted sample rows or query extracts.
-- Never ask for passwords, secrets, unrestricted production access, or connection strings containing credentials. Prefer a database file, schema export, ERD, redacted samples, or query extracts.
-- Topic or idea only: ask whether suitable data already exists.
-- No data available: ask the user to choose between help locating suitable public data or generating synthetic data. Locate or generate the data, then inspect it before planning.
-- Synthetic data: follow [references/project-modes.md](references/project-modes.md).
-- Existing project: request only the evidence needed for the requested review. A screenshot and project context may support a focused story critique, but do not claim to have inspected the underlying data when it was not supplied.
+## Match evidence to the claim
 
-Until the data gate is satisfied, do not propose detailed stakeholder routes, analytical questions, KPIs, queries, findings, or charts.
+Apply the evidence contract to the scope requested. Inspect supplied artifacts before asking for information already present. A schema can support a conditional build plan; a screenshot can support visual review; neither establishes full-data quality or actual findings. If a missing input blocks a specific claim, narrow or condition that part and continue useful work.
 
-Ask only for information required to inspect or obtain the data. Do not replace missing evidence with invented assumptions.
+For a topic only, help locate public data or generate synthetic data when requested. Do not invent a detailed data-backed plan, real fields, or findings. A provisional concept is allowed if assumptions and evidence still needed are explicit.
 
-## 2. Plan the project
+Record a concise inspection summary: artifacts and scope inspected, checks actually performed and their results, unknowns, and implications. Never claim a check ran when it was only proposed.
 
-Once the data gate is satisfied, follow [references/planning-framework.md](references/planning-framework.md).
+Classify **question feasibility**, not conclusions:
 
-Unless the user has already supplied a suitable stakeholder and decision:
+- **Supported:** directly answerable within inspected evidence, subject to stated scope and quality limits.
+- **Derivable:** answerable through a specified calculation or transformation whose inputs and grain are available.
+- **Not supported:** needs missing evidence or unjustified assumptions.
 
-- provide exactly two stakeholder and decision routes unless the user explicitly requests a different number;
-- use one specific stakeholder and one actionable decision per route; and
-- recommend one based on evidence, usefulness, learner goal, and achievable scope.
+These labels do not mean an answer was calculated or a hypothesis confirmed. With schema-only evidence, mark feasibility as provisional pending execution. Findings need executed analysis and traceable results. Never invent fields, causes, targets, benchmarks, business facts, impact, or predictions. Separate association from causation. For real organisations, use a simulated portfolio scenario unless a genuine commission is established.
 
-Preserve appropriate user choices. If a proposed stakeholder is too senior, broad, or disconnected from what the data can support, explain the mismatch and narrow the role or decision rather than accepting it uncritically.
+## Keep the plan purposeful
 
-For SQL, Python, cleaning, automation, spreadsheet, BI, storytelling, forecasting, experimentation, or synthetic-data projects, also follow [references/project-modes.md](references/project-modes.md).
+Connect stakeholder -> actionable decision -> question -> measure -> evidence. Validate an appropriate route supplied by the user. Otherwise recommend the strongest feasible route; offer alternatives only when a meaningful choice exists. Do not force a fixed number of routes, questions, measures, charts, or pages.
 
-Choose the project format from the analytical goal. Do not default to a dashboard.
+Choose the format from the analytical goal. Keep unsupported ideas outside the core analysis and explain what would make them feasible. Avoid unnecessary techniques added to appear advanced.
 
-## 3. Evidence discipline
+In teaching or guided mode, include one relevant judgement checkpoint, such as asking the learner to justify a metric or identify an unsupported inference. Give useful guidance first; do not withhold requested deliverables or impose a quiz on users who want execution. Preserve authorship honestly: distinguish learner decisions, AI assistance, and verified results.
 
-Classify proposed analysis as:
+## Revise and verify
 
-- **Supported:** directly answerable from available data.
-- **Derivable:** requires a transparent calculation or transformation.
-- **Not supported:** requires missing evidence or unjustified assumptions.
+When constraints or evidence change, retain accepted choices and update dependent measures, questions, visuals, filters, and conclusions. Check for contradictions instead of restarting the project.
 
-The recommended analysis should normally contain only Supported and Derivable questions. Move Not supported ideas to the boundaries section and explain what additional evidence would be required.
-
-Never invent fields, findings, causes, benchmarks, targets, organisational facts, or predictions.
-
-Do not convert association into causation. Narrow unsupported analysis or state what additional data would be required.
-
-For work involving a real organisation, label it as a simulated portfolio scenario unless evidence establishes otherwise. Never imply an internal commission.
-
-Recommend visuals only when they serve an analytical question or decision.
-
-## 4. Iteration
-
-Preserve the agreed brief and accepted parts of previous work.
-
-When the user rejects, corrects, or changes something:
-
-1. Identify what changed.
-2. Retain unaffected constraints and accepted decisions.
-3. Revise only what is necessary.
-4. Propagate the change through dependent sections.
-5. Check the revised project for contradictions.
-6. Do not restart or redesign the project unless new evidence or the user requires it.
-
-Treat later user instructions as updates to the existing project, not as permission to discard previously accepted work. If the user explicitly asks to start over, follow that instruction.
-
-## 5. Final check
-
-Before responding, ensure:
-
-- stakeholder to decision to question to measure to evidence are connected;
-- each stakeholder can act on its corresponding decision;
-- the recommended route is realistically scoped;
-- questions and measures map to available or explicitly required data;
-- unsupported analysis, assumptions, and limitations are visible;
-- the project format fits the analytical goal;
-- no pre-analysis findings have been fabricated;
-- real organisations are not presented as having commissioned the project without evidence;
-- existing learner work is strengthened rather than unnecessarily replaced; and
-- the language is respectful and beginner-friendly.
-
+Before delivery, verify that claims match inspected evidence, calculations and tests are labelled as executed or pending, and mockup content is visibly distinguished from verified analysis. For an interactive prototype, check its controls, empty states, layout, and keyboard use; state any unverified host-specific behaviour. End with the most useful next action, not a repeated full framework.
