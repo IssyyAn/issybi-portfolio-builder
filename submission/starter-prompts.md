@@ -7,3 +7,6 @@
 5. Check which of my proposed KPIs are supported, derivable, or unsupported by this dataset.
 6. Turn my completed analysis into a traceable GitHub case-study plan without inventing impact.
 
+
+7. Create a polished interactive dashboard mockup from my brief, using clearly labelled synthetic data, functional filters and reset.
+8. Use my schema to make a conditional SQL project plan and distinguish checks already performed from validation still needed.

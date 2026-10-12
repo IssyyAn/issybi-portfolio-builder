@@ -6,19 +6,7 @@ Combine modes only when each component adds meaningful portfolio evidence.
 
 ## SQL investigation
 
-First inspect the database or sufficient evidence of its structure.
-
-Accept:
-
-- safe accessible connection;
-- database file;
-- schema or ERD;
-- table definitions with columns, data types, keys, and relationships; or
-- representative redacted sample rows or query extracts.
-
-Confirm the SQL dialect.
-
-Never request passwords, secrets, unrestricted production access, or connection strings containing credentials. Prefer portable, redacted evidence.
+Apply evidence-contract.md: a schema/ERD can support a conditional investigation plan; sample rows support checks only within that sample. Confirm the SQL dialect and document keys/relationships as declared or verified. Do not demand production access when structural evidence is enough for planning. Never claim quality checks or queries ran without execution.
 
 Then plan the investigation, validation checks, queries, documented decisions, and concise findings output.
 
@@ -85,6 +73,8 @@ Use:
 - visuals that support the selected decision.
 
 Do not add pages or KPIs simply to fill the dashboard.
+
+For visual design or a functional prototype, use [dashboard-mockups.md](dashboard-mockups.md). Native BI implementation and validation remain separate from a browser mockup.
 
 ## Data story or research brief
 

@@ -1,10 +1,7 @@
-# Release Notes — v1.0.0
+# Release Notes — v1.1.1 candidate
 
-Initial public submission of Portfolio Builder, a skills-only plugin by Issy BI.
+Evidence-scoped project planning and review, traceable inspection records, explicit provisional feasibility, proportionate project framing, optional learner checkpoints, and dashboard mockup/prototype support.
 
-Portfolio Builder helps users turn a topic, dataset, database schema, or existing project into a focused and evidence-based data portfolio project. This version includes an evidence-first data gate, two-route stakeholder and decision framing, Supported/Derivable/Not supported feasibility checks, mode-specific planning guidance, SQL credential safety, existing-project preservation, contradiction checks, and portfolio case-study guidance.
+Interactive mockups use labelled illustrative data where needed and require visual, interaction and aggregate checks. A prototype is not a production dashboard or a native Power BI implementation.
 
-No authentication, MCP server, external account, or reviewer credential is required.
-
-Some positive tests require small non-sensitive fixture files, as described in the submitted test cases. No test requires MFA, private-network access, or production data.
-
+This is a local candidate. See tests/VALIDATION_RESULTS.md for executed checks and remaining host/release tests. The historical v1.0 workbook is not a behavioural pass record for this revision. No public submission or release has been performed.

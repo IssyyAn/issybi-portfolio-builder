@@ -1,14 +1,13 @@
 interface:
-  display_name: Portfolio Builder Skill
-  short_description: Plan purposeful data portfolio projects
-  default_prompt: Use $data-portfolio-builder to turn my dataset or project idea into a structured portfolio project plan.
-  icon_small: assets/icon.svg
-  icon_large: assets/icon.svg
+  display_name: "Portfolio Builder Skill"
+  short_description: "Plan evidence-based projects and dashboard mockups"
+  default_prompt: "Use $data-portfolio-builder to plan my data portfolio project or create a functional dashboard mockup from my brief."
+  icon_small: "./assets/icon.svg"
+  icon_large: "./assets/icon.svg"
 policy:
   products:
-  - chatgpt
-  - codex
-  - api
-  - atlas
+  - "chatgpt"
+  - "codex"
+  - "api"
+  - "atlas"
   allow_implicit_invocation: true
-

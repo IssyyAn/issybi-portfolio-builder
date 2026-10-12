@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "issybi-portfolio-builder",
-  "version": "1.0.0",
-  "description": "Plan evidence-based data analyst portfolio projects from data, schemas, ideas, or existing work.",
+  "version": "1.1.2",
+  "description": "Plan evidence-based data portfolio projects, review analytical work, and create polished dashboard mockups and interactive prototypes.",
   "author": {
     "name": "Issy BI"
   },
@@ -13,14 +13,16 @@
     "sql",
     "power bi",
     "spreadsheets",
-    "data storytelling"
+    "data storytelling",
+    "dashboard mockups",
+    "interactive prototypes"
   ],
   "extensions": {
     "com.openai": {
       "interface": {
         "displayName": "Portfolio Builder",
-        "shortDescription": "Build evidence-based data portfolio projects.",
-        "longDescription": "Turn a topic, dataset, database schema, or existing project into a focused portfolio project with an actionable stakeholder decision, evidence checks, a practical build plan, and a traceable case study.",
+        "shortDescription": "Plan projects, mock dashboards",
+        "longDescription": "Plan focused data portfolio projects with evidence scoped to the task, traceable analytical questions and learner judgement. Review existing work or create polished dashboard mockups and interactive prototypes with clearly labelled demonstration data. Production BI integration requires separate implementation and validation. Dashboard design uses inspected Tableau, Dribbble and Figma references where accessible, with explicit style decisions and access limitations.",
         "developerName": "Issy BI",
         "category": "Data & Analytics",
         "capabilities": [
@@ -42,4 +44,3 @@
     }
   }
 }
-

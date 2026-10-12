@@ -4,19 +4,20 @@
 
 - Create a public GitHub repository named `issybi-portfolio-builder`.
 - Upload the contents of this release folder, preserving all paths.
-- Confirm `README.md`, `LICENSE`, `docs/`, `submission/`, `.agents/`, and `plugins/` are present.
+- Confirm `README.md`, `LICENSE`, `docs/`, `submission/` and `plugins/` are present.
 - Enable GitHub Issues for support.
-- Create a `v1.0.0` release and attach the two ZIP bundles from `dist/`.
+- Create a `v1.1.1` release and attach the two ZIP bundles from `dist/`.
 
 ## 2. Replace URL placeholders
 
-In `submission/listing.md`, replace `OWNER` with the GitHub username or organisation. Confirm the website, support, privacy, and terms URLs open without signing in.
+In `submission/listing.md`, confirm the repository owner is `IssyyAn`. Confirm the website, support, privacy, and terms URLs open without signing in.
 
 ## 3. Test the exact package
 
 - Add the GitHub repository as a plugin marketplace or test the local checkout.
 - Run every `PB-SUB` test in a fresh chat.
-- Record evidence in `Portfolio_Builder_Skill_Test_Plan_v1.0.xlsx`.
+- Record current evidence in `tests/VALIDATION_RESULTS.md`; retain the v1.0 workbook as historical coverage.
+- Run the v1.1 behavioural cases, mockup interaction checks, and comparison protocol in `docs/TESTING.md`.
 - Do not submit until all eight cases pass and the full release rule in `docs/TESTING.md` is satisfied.
 
 ## 4. Prepare OpenAI Platform access
@@ -31,7 +32,7 @@ In `submission/listing.md`, replace `OWNER` with the GitHub username or organisa
 - Open the OpenAI plugin submission portal.
 - Choose **Skills only**.
 - Use the listing copy in `submission/listing.md`.
-- Upload `dist/data-portfolio-builder-skill-v1.0.0.zip` on the Skills tab. If the portal requests the complete portable package instead, use `dist/issybi-portfolio-builder-plugin-v1.0.0.zip`.
+- Upload `dist/data-portfolio-builder-skill-v1.1.1.zip` on the Skills tab. If the portal requests the complete portable package instead, use `dist/issybi-portfolio-builder-plugin-v1.1.1.zip`.
 - Add the starter prompts from `submission/starter-prompts.md`.
 - Add the five positive and three negative cases from `submission/test-cases.md`.
 - Select only countries where the publisher, support process, and legal terms are ready.

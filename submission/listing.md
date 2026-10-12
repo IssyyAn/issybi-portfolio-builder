@@ -18,13 +18,13 @@ Data & Analytics
 
 ## Short description
 
-Build evidence-based data portfolio projects from real data.
+Plan projects, mock dashboards
 
 ## Long description
 
 Portfolio Builder turns a topic, dataset, database schema, or existing project into one focused and achievable data portfolio project.
 
-It checks the available evidence before planning, connects a realistic stakeholder to an actionable decision, separates supported analysis from unsupported ideas, and produces a practical brief for SQL, Python, spreadsheets, BI, data cleaning, automation, or data storytelling work.
+It matches evidence to the requested task, records inspection scope and pending checks, connects stakeholders to decisions, and separates question feasibility from verified findings. It supports focused project planning, review, and polished dashboard mockups or local interactive prototypes. Mockups use clearly labelled illustrative data when real data is unavailable; production BI integration requires separate implementation and validation.
 
 Use it to define the right project question, challenge an unrealistic stakeholder, scope a project to your time and skill level, strengthen an existing dashboard without discarding good work, or plan the portfolio evidence a reviewer should be able to inspect.
 
@@ -32,10 +32,10 @@ Portfolio Builder does not invent findings, targets, business facts, causal clai
 
 ## URLs to enter after GitHub upload
 
-- Website: `https://github.com/IssyAn/issybi-portfolio-builder`
-- Support: `https://github.com/IssyAn/issybi-portfolio-builder/issues`
-- Privacy: `https://github.com/IssyAn/issybi-portfolio-builder/blob/main/docs/PRIVACY.md`
-- Terms: `https://github.com/IssyAn/issybi-portfolio-builder/blob/main/docs/TERMS.md`
+- Website: `https://github.com/IssyyAn/issybi-portfolio-builder`
+- Support: `https://github.com/IssyyAn/issybi-portfolio-builder/issues`
+- Privacy: `https://github.com/IssyyAn/issybi-portfolio-builder/blob/main/docs/PRIVACY.md`
+- Terms: `https://github.com/IssyyAn/issybi-portfolio-builder/blob/main/docs/TERMS.md`
 
 ## Logo
 
